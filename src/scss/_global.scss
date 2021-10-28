@@ -1,0 +1,40 @@
+* {
+    min-width: 0;
+}
+
+a {
+    color: $color-primary;
+    text-decoration-skip-ink: none;
+    outline: none !important;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+:focus,
+:visited {
+    outline: none !important;
+}
+
+body {
+    background-repeat: no-repeat;
+    padding-top: 27px;
+    background-image: url("../images/ellipse/ellipse_01.svg");
+}
+
+.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

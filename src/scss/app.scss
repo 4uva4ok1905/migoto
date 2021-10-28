@@ -1,26 +1,39 @@
-/* By Athlon Front-End Team */
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
-/* Core variables */
-@import 'base/vars';
+@import "config";
 
-/* CSS Reset */
-@import 'base/reset';
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
 
-/* CSS print */
-@import 'base/print';
+@import "node_modules/bootstrap/scss/utilities";
 
-/* Fonts */
-@import 'base/fonts';
+$utilities: map-get-multiple(
+                $utilities,
+                        (
+                                "display",
+                                "order",
+                                "flex",
+                                "flex-direction",
+                                "flex-grow",
+                                "flex-shrink",
+                                "flex-wrap",
+                                "justify-content",
+                                "align-items",
+                                "align-content",
+                                "align-self",
+                                "margin-end",
+                                "margin-start",
+                        )
+);
 
-/* Mixins, helpers and functions */
-@import 'base/mixins';
+@import "node_modules/bootstrap/scss/utilities/api";
 
-/* Vendor */
+@import "global";
 
-/* Components */
+@import "components/header";
+@import "components/btn";
 
-/* Browser specific styles */
-@import 'dirty/hacks';
-
-/* Demo Page styles */
-@import 'demo';
+@import "font";

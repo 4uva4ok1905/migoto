@@ -1,0 +1,42 @@
+$variable-prefix: migoto-;
+
+$color-primary: #0A0911;
+
+$color-grey: #828898;
+$color-brown: #D88538;
+
+:root {
+    --#{$variable-prefix}body-color: #000;
+    --#{$variable-prefix}body-bg: #fff;
+    --#{$variable-prefix}body-font-family: 'Nunito Sans', sans-serif;
+    --#{$variable-prefix}body-text-align: left;
+    --#{$variable-prefix}body-font-size: 18px;
+    --#{$variable-prefix}body-font-weight: 300;
+    --#{$variable-prefix}body-line-height: 1.3;
+    --#{$variable-prefix}gutter-x: 10px;
+}
+
+@include media-breakpoint-up(xl) {
+    :root {
+        --#{$variable-prefix}gutter-x: 20px;
+    }
+}
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 730px,
+    md: 985px,
+    lg: 1285px,
+    xl: 1800px,
+);
+
+$container-max-widths: (
+    sm: 710px,
+    md: 965px,
+    lg: 1245px,
+    xl: 1760px,
+);
+
+
+
+

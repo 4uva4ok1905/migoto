@@ -1,0 +1,60 @@
+.btn {
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    height: 83px;
+    font-weight: 600;
+    font-size: 20px;
+    flex-shrink: 0;
+    padding: 0;
+    overflow: hidden;
+
+    &.btn-secondary {
+        background: $color-primary;
+        color: #fff;
+    }
+
+    .btn-text {
+        padding: 0 40px;
+    }
+
+    .btn-icon {
+        margin-left: -1px;
+        width: 83px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        &:before {
+            content: "";
+            background: rgba(255, 255, 255, 0.2);
+            height: calc(100% - 20px);
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 1px;
+        }
+    }
+
+    &.btn-small {
+        height: 55px;
+        font-size: 16px;
+        @include media-breakpoint-up(lg) {
+            height: 62px;
+        }
+
+        .btn-text {
+            padding: 0 30px;
+        }
+
+        .btn-icon {
+            width: 55px;
+            @include media-breakpoint-up(lg) {
+                width: 61px;
+            }
+        }
+    }
+}

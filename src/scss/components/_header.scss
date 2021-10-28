@@ -1,0 +1,135 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82px;
+    padding: 0 10px;
+    @include media-breakpoint-up(sm) {
+        padding: 0;
+    }
+    @include media-breakpoint-up(xl) {
+        height: 122px;
+    }
+}
+
+.header-language {
+    font-size: 12px;
+    text-align: left;
+    color: $color-grey;
+    white-space: nowrap;
+    margin-left: 40px;
+    @include media-breakpoint-up(lg) {
+        text-align: right;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 14px;
+        text-align: right;
+        margin-left: 60px;
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-brown;
+        text-decoration: underline;
+        @include media-breakpoint-up(xl) {
+            font-size: 18px;
+        }
+    }
+}
+
+.header-menu {
+    a {
+        position: relative;
+        transition: color .5s;
+        text-transform: uppercase;
+        font-size: 14px;
+        @include media-breakpoint-up(xl) {
+            font-size: 18px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0;
+            background-color: $color-brown;
+            transition: width .5s;
+        }
+
+        &:hover {
+            color: $color-brown;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+    }
+
+    li:not(:last-child) {
+        padding-right: 40px;
+        @include media-breakpoint-up(xl) {
+            padding-right: 50px;
+        }
+    }
+}
+
+.header-logo {
+    width: 100px;
+    margin-right: auto;
+    @include media-breakpoint-up(sm) {
+        width: 150px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-right: 80px;
+    }
+    @include media-breakpoint-up(xl) {
+        width: 179px;
+        margin-right: 120px;
+    }
+}
+
+.header-burger {
+    margin-left: 20px;
+    @include media-breakpoint-up(sm) {
+        margin-left: 40px;
+    }
+
+    display: block;
+    width: 24px;
+    height: 16px;
+    transform: rotate(0);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: red;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+            top: calc(100% - 2px);
+        }
+    }
+}
+

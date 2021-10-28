@@ -2,44 +2,31 @@
   "name": "migoto",
   "version": "1.0.0",
   "private": true,
-  "author": "Roman Fedorov <roma.fe1905@gmail.com>",
-  "homepage": "https://github.com/4uva4ok1905/migoto#readme",
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.6",
-    "autoprefixer": "^10.3.4",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^6.3.0",
-    "css-minimizer-webpack-plugin": "^3.0.2",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "html-webpack-plugin": "^5.3.2",
-    "image-minimizer-webpack-plugin": "^2.2.0",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-jpegtran": "^7.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "mini-css-extract-plugin": "^2.3.0",
-    "postcss": "^8.3.6",
-    "postcss-loader": "^6.1.1",
-    "sass": "^1.41.1",
-    "sass-loader": "^12.1.0",
-    "terser-webpack-plugin": "^5.2.4",
-    "webpack": "^5.53.0",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1",
-    "webpack-merge": "^5.8.0",
-    "gh-pages": "^3.2.3"
-  },
-  "engines": {
-    "node": "^12 || >=14"
-  },
   "scripts": {
-    "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
-    "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
-    "predeploy": "npm run production",
+    "start": "cross-env PORT=7070 gulp start --development",
+    "build": "gulp build --production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://4uva4ok1905.github.io/migoto",
+  "author": "Roman Fedorov <roma.fe1905@gmail.com>",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/register": "^7.15.3",
+    "browser-sync": "^2.27.7",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "gh-pages": "^3.2.3",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-mode": "^1.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^4.1.0",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
