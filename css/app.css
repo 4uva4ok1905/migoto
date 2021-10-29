@@ -2968,12 +2968,23 @@ body {
   height: auto;
 }
 
+.body-wrapper.is--open {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 82px;
+  z-index: 11;
   padding: 0 10px;
 }
 @media (min-width: 730px) {
@@ -2996,6 +3007,7 @@ body {
 .header.is--fixed {
   position: fixed;
   transform: translate(0, 0);
+  background-color: #fff;
 }
 .header.is--fixed .header-partner {
   display: flex;
@@ -3185,6 +3197,17 @@ body {
   .btn.btn-small .btn-icon {
     width: 61px;
   }
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*!
