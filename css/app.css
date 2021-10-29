@@ -2968,14 +2968,9 @@ body {
   height: auto;
 }
 
-.body-wrapper.is--open {
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
+.compensate-for-scrollbar {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 .header {
@@ -3208,6 +3203,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 /*!
