@@ -4,6 +4,9 @@ import mode from 'gulp-mode';
 import paths from './paths';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
+import cssnano from "cssnano";
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
 
 const sass = gulpSass(dartSass);
 
@@ -11,6 +14,7 @@ const styles = () => {
     return gulp.src(paths.src.scss)
         .pipe(mode().development(sourcemaps.init()))
         .pipe(sass().on('error', sass.logError))
+        .pipe(mode().production(postcss([autoprefixer(), cssnano()])))
         .pipe(mode().development(sourcemaps.write()))
         .pipe(gulp.dest(paths.dist.css));
 };

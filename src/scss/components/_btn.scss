@@ -2,31 +2,58 @@
     border-radius: 10px;
     display: inline-flex;
     align-items: center;
-    border: none;
-    height: 83px;
+    height: 55px;
     font-weight: 600;
-    font-size: 20px;
     flex-shrink: 0;
     padding: 0;
     overflow: hidden;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 14px;
+    @include media-breakpoint-up(sm) {
+        height: 62px;
+        font-size: 16px
+    }
+    @include media-breakpoint-up(xl) {
+        height: 83px;
+        font-size: 20px;
+    }
 
     &.btn-secondary {
         background: $color-primary;
+        border-color: $color-primary;
         color: #fff;
     }
 
+    &.btn-outline {
+        border-color: rgba(38, 38, 44, 0.2);
+
+        .btn-icon:before {
+            background: rgba(38, 38, 44, 0.2);
+        }
+    }
+
     .btn-text {
-        padding: 0 40px;
+        padding: 0 30px;
+        white-space: nowrap;
+        width: 100%;
+        @include media-breakpoint-up(xl) {
+            padding: 0 40px;
+        }
     }
 
     .btn-icon {
+        flex-shrink: 0;
         margin-left: -1px;
-        width: 83px;
+        width: 61px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        @include media-breakpoint-up(xl) {
+            width: 83px;
+        }
 
         &:before {
             content: "";

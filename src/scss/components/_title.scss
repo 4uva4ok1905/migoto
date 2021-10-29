@@ -1,0 +1,45 @@
+.title {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 10px;
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 30px;
+    }
+}
+
+.title-additional {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6C707B;
+    padding-bottom: 5px;
+    @include media-breakpoint-up(sm) {
+        font-size: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.title-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    background: linear-gradient(45deg, #0A0911 0%, rgba(10, 9, 17, 0.76) 76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-primary;
+    @include media-breakpoint-up(sm) {
+        font-size: 48px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 64px;
+    }
+}

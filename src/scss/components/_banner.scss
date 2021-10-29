@@ -1,0 +1,236 @@
+.banner {
+    padding-top: 99px;
+    margin-top: 137px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding-bottom: 120px;
+    @include media-breakpoint-up(sm) {
+        margin-top: 97px;
+        padding-top: 0;
+        padding-bottom: 220px;
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: 91px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: 27px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-top: 51px;
+        padding-bottom: 400px;
+    }
+
+
+    .title {
+        text-align: left;
+        @include media-breakpoint-up(sm) {
+            padding-top: 280px;
+        }
+    }
+
+    .title-main {
+        font-size: 41px;
+        line-height: 1.1;
+        @include media-breakpoint-up(sm) {
+            font-size: 68px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 110px;
+        }
+    }
+
+    .title-additional {
+        @include media-breakpoint-up(sm) {
+            position: relative;
+            padding-left: 42px;
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 10px;
+        }
+
+        &:before {
+            @include media-breakpoint-up(sm) {
+                content: "";
+                width: 31px;
+                height: 1px;
+                background: #A0A7BB;
+                position: absolute;
+                left: 0;
+                top: 8px
+            }
+            @include media-breakpoint-up(xl) {
+                top: 12px
+            }
+        }
+    }
+}
+
+.banner-caption {
+    display: flex;
+    flex-flow: column;
+    @include media-breakpoint-up(sm) {
+        flex-flow: row;
+    }
+
+    .btn {
+        margin-top: 10px;
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+            margin-top: 30px;
+            width: auto;
+        }
+        @include media-breakpoint-up(md) {
+            margin-top: 5px;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .btn + .btn {
+            margin-left: 30px;
+        }
+    }
+}
+
+.banner-counter {
+    padding-top: 61px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 251px;
+        display: flex;
+        align-items: flex-end;
+    }
+    @include media-breakpoint-up(md) {
+        padding-top: 92px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 172px;
+    }
+}
+
+.banner-counter__count {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 400;
+    @include media-breakpoint-up(sm) {
+        flex-shrink: 0;
+        padding-right: 20px;
+        margin-right: 20px;
+        position: relative;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 96px;
+        padding-right: 30px;
+        margin-right: 30px;
+    }
+
+    &:before {
+        @include media-breakpoint-up(sm) {
+            content: "";
+            width: 1px;
+            height: 52px;
+            background: #A0A7BB;
+            position: absolute;
+            right: 0;
+            top: calc(50% + 15px);
+            transform: translate(0, -50%);
+        }
+        @include media-breakpoint-up(xl) {
+            height: 70px;
+            top: calc(50% + 20px);
+        }
+    }
+
+}
+
+.banner-counter__description {
+    font-weight: 400;
+    font-size: 12px;
+    color: #6C707B;
+    text-transform: uppercase;
+    @include media-breakpoint-up(sm) {
+        font-size: 14px;
+        max-width: 300px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 20px;
+        max-width: 420px;
+    }
+}
+
+.banner_phones {
+    position: relative;
+    z-index: 1;
+    display: none;
+    @include media-breakpoint-up(sm) {
+        display: block;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: 0;
+        width: 297.75px;
+        z-index: 1;
+        height: 665.88px;
+        background-repeat: no-repeat;
+        background-image: url("../images/mobile_01.png");
+        animation: anim-banner2 2.5s infinite ease-in-out;
+        background-size: cover;
+        @include media-breakpoint-up(md) {
+            right: 137px;
+        }
+        @include media-breakpoint-up(lg) {
+            right: 317px;
+        }
+        @include media-breakpoint-up(xl) {
+            right: 439px;
+            width: 478px;
+            height: 1069px;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: -138px;
+        top: 188px;
+        z-index: 2;
+        background-repeat: no-repeat;
+        width: 297.13px;
+        height: 750.6px;
+        background-size: cover;
+        background-image: url("../images/mobile_02.png");
+        animation: anim-banner 2.5s infinite ease-in-out;
+        @include media-breakpoint-up(md) {
+            right: -26px;
+        }
+        @include media-breakpoint-up(lg) {
+            right: 156px;
+        }
+        @include media-breakpoint-up(xl) {
+            right: 176px;
+            width: 477px;
+            height: 1205px;
+        }
+    }
+}
+
+
+@keyframes anim-banner {
+    0%, to {
+        transform: translate(0, 0)
+    }
+    50% {
+        transform: translate(0, 10px)
+    }
+}
+
+@keyframes anim-banner2 {
+    0%, to {
+        transform: translate(0, 0)
+    }
+    50% {
+        transform: translate(0, -10px)
+    }
+}

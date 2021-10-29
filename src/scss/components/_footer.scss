@@ -1,0 +1,195 @@
+.footer__block {
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    padding: 20px 15px 40px;
+    @include media-breakpoint-up(sm) {
+        padding: 40px 20px 50px;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 30px 20px 50px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 40px 40px 60px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 60px 60px 80px;
+    }
+}
+
+.footer-logo {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 40px;
+    }
+    @include media-breakpoint-up(md) {
+        padding-bottom: 0;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        background: radial-gradient(#C0C2CE 0%, rgba(192, 194, 206, 0) 75%);
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    img {
+        max-width: 160px;
+        @include media-breakpoint-up(sm) {
+            max-width: 183px;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: 220px;
+        }
+    }
+}
+
+.footer__top {
+    position: relative;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 30px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 60px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        background: radial-gradient(#C0C2CE 0%, rgba(192, 194, 206, 0) 75%);
+    }
+}
+
+
+.footer-menu {
+    padding: 30px 0;
+    @include media-breakpoint-up(sm) {
+        padding: 40px 0;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 0;
+    }
+
+    a {
+        position: relative;
+        transition: color .5s;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        @include media-breakpoint-up(xl) {
+            font-size: 18px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0;
+            background-color: $color-brown;
+            transition: width .5s;
+        }
+
+        &:hover {
+            color: $color-brown;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    li:not(:last-child) {
+        padding-bottom: 20px;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 0;
+            padding-right: 40px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding-right: 50px;
+        }
+    }
+}
+
+.footer__bottom {
+    color: #6C707B;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 30px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 40px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 50px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 60px;
+        font-size: 18px;
+    }
+
+    a {
+        color: #2D2F35;
+        font-weight: 300;
+        text-decoration-line: underline;
+        font-size: 14px;
+        margin-top: 30px;
+        display: inline-block;
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+            text-align: right;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 18px;
+        }
+
+    }
+}
+
+
+.footer-copy {
+    @include media-breakpoint-up(md) {
+        text-align: left;
+    }
+}
+
+.footer-policy {
+    @include media-breakpoint-up(md) {
+        text-align: right;
+    }
+}
+
+.footer-language {
+    text-align: right;
+    font-weight: normal;
+    font-size: 12px;
+    color: $color-grey;
+    @include media-breakpoint-up(xl) {
+        font-size: 12px;
+    }
+
+    a {
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: underline;
+        color: $color-brown;
+        @include media-breakpoint-up(xl) {
+            font-size: 18px;
+        }
+    }
+}
