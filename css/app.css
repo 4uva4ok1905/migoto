@@ -2986,8 +2986,19 @@ body {
     height: 122px;
   }
 }
+.header.is--hide {
+  transition: transform 0.5s;
+  transform: translate(0, -100%);
+}
+.header .header-partner {
+  display: none;
+}
 .header.is--fixed {
   position: fixed;
+  transform: translate(0, 0);
+}
+.header.is--fixed .header-partner {
+  display: flex;
 }
 
 .header-language {
