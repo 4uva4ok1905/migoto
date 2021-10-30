@@ -79,4 +79,7 @@ body {
 
 .row {
     --migoto-gutter-x: 20px;
+    @include media-breakpoint-up(md) {
+        --migoto-gutter-x: 40px;
+    }
 }

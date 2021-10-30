@@ -14,6 +14,9 @@ $color-brown: #D88538;
     --#{$variable-prefix}body-font-weight: 300;
     --#{$variable-prefix}body-line-height: 1.3;
     --#{$variable-prefix}gutter-x: 20px;
+    @include media-breakpoint-up(md) {
+        --#{$variable-prefix}gutter-x: 40px;
+    }
 }
 
 //@include media-breakpoint-up(xl) {
@@ -24,17 +27,17 @@ $color-brown: #D88538;
 
 $grid-breakpoints: (
     xs: 0,
-    sm: 730px,
-    md: 985px,
-    lg: 1285px,
-    xl: 1800px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1366px,
+    xl: 1840px,
 );
 
 $container-max-widths: (
-    sm: 710px,
-    md: 965px,
-    lg: 1245px,
-    xl: 1760px,
+    sm: 765px,
+    md: 1025px,
+    lg: 1285px,
+    xl: 1800px,
 );
 
 
