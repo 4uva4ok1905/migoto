@@ -10,6 +10,7 @@
     background-color: transparent;
     border: 1px solid transparent;
     font-size: 14px;
+    text-align: center;
     @include media-breakpoint-up(sm) {
         height: 62px;
         font-size: 16px
@@ -26,6 +27,7 @@
     }
 
     &.btn-outline {
+        color: $color-primary;
         border-color: rgba(38, 38, 44, 0.2);
 
         .btn-icon:before {

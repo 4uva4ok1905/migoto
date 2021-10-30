@@ -1,0 +1,117 @@
+.price-table {
+    font-size: 12px;
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+    }
+
+    table {
+        width: 100%;
+        color: #6C707B;
+        border-collapse: separate;
+        border-spacing: 0 11px;
+    }
+
+    thead {
+        td {
+            padding: 0 10px;
+            text-transform: uppercase;
+            @include media-breakpoint-up(sm) {
+                padding: 0 40px;
+            }
+        }
+    }
+
+    tbody {
+        font-size: 18px;
+        @include media-breakpoint-up(sm) {
+            font-size: 36px;
+        }
+
+        tr:last-child {
+            box-shadow: 0 29px 15px -15px rgba(0, 0, 0, 0.05);
+
+            td {
+                background: #f0f0f3;
+            }
+        }
+
+        td {
+            padding: 10px;
+            background: #f8f8f8;
+            @include media-breakpoint-up(sm) {
+                padding: 25px 40px;
+            }
+        }
+
+        td:first-child {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            @include media-breakpoint-up(sm) {
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+
+        }
+
+        td:last-child {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            @include media-breakpoint-up(sm) {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+        }
+    }
+
+    .badge.is--vip {
+        margin-left: 10px;
+        @include media-breakpoint-up(sm) {
+            margin-left: 20px;
+        }
+
+        .badge-icon {
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            @include media-breakpoint-up(sm) {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.price-table__currency {
+    color: #6C707B;
+    font-weight: 300;
+    -webkit-text-fill-color: initial;
+}
+
+.price-table__chunk,
+.price-table__price {
+    color: $color-primary;
+    position: relative;
+    background: linear-gradient(45deg, #0A0911 0%, rgba(10, 9, 17, 0.76) 76%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        width: 1px;
+        height: 29px;
+        background: rgba(10, 9, 17, 0.1);
+        transform: translate(0, -50%);
+        @include media-breakpoint-up(sm) {
+            left: -40px;
+        }
+    }
+}
+
+.price-table__price {
+    font-weight: bold;
+}

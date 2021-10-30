@@ -1,0 +1,24 @@
+.graph-block {
+    background: #F8F8F8;
+    border-radius: 20px;
+    padding: 30px 20px 30px 40px;
+    @include media-breakpoint-up(xl) {
+        padding: 60px 20px 40px 80px;
+    }
+}
+
+.graph-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.graph-header__info {
+    padding-bottom: 15px;
+
+    .badge + .badge {
+        margin-left: 40px;
+    }
+}

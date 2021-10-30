@@ -13,14 +13,14 @@ $color-brown: #D88538;
     --#{$variable-prefix}body-font-size: 18px;
     --#{$variable-prefix}body-font-weight: 300;
     --#{$variable-prefix}body-line-height: 1.3;
-    --#{$variable-prefix}gutter-x: 10px;
+    --#{$variable-prefix}gutter-x: 20px;
 }
 
-@include media-breakpoint-up(xl) {
-    :root {
-        --#{$variable-prefix}gutter-x: 20px;
-    }
-}
+//@include media-breakpoint-up(xl) {
+//    :root {
+//        --#{$variable-prefix}gutter-x: 20px;
+//    }
+//}
 
 $grid-breakpoints: (
     xs: 0,

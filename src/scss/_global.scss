@@ -25,6 +25,21 @@ input::-ms-clear {
     outline: none !important;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"],
+input[type="time"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    content: attr(placeholder);
+}
+
 body {
     background-repeat: no-repeat;
     background-image: url("../images/ellipse/ellipse_01.svg"), url("../images/ellipse/ellipse_02.svg");
@@ -49,4 +64,19 @@ body {
 .img-fluid {
     max-width: 100%;
     height: auto;
+}
+
+.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+
+    &.row > * {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+.row {
+    --migoto-gutter-x: 20px;
 }

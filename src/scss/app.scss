@@ -33,15 +33,20 @@ $utilities: map-get-multiple(
 
 @import "global";
 
-@import "components/header";
-@import "components/footer";
 @import "components/btn";
 @import "components/title";
+@import "components/form";
+@import "components/badge";
+@import "components/header";
+@import "components/footer";
 @import "components/mobile_menu";
 
-@import "components/contact";
-@import "components/banner";
-@import "components/mission";
-@import "components/form";
+@import "main/contact";
+@import "main/banner";
+@import "main/mission";
+@import "main/form";
+@import "main/slide";
+@import "main/graph";
+@import "main/price";
 
 @import "font";

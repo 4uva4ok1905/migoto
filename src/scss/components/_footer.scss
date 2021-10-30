@@ -184,12 +184,17 @@
     }
 
     a {
+        transition: color 0.5s;
         font-weight: 600;
         font-size: 14px;
         text-decoration: underline;
         color: $color-brown;
         @include media-breakpoint-up(xl) {
             font-size: 18px;
+        }
+
+        &:hover {
+            color: $color-primary;
         }
     }
 }

@@ -56,14 +56,14 @@
                     </li>
                 </ul>
             </nav>
-            <button type="button" class="header-partner btn btn-secondary btn-small">
+            <a href="https://www.migotoni.com.ua/register" class="header-partner btn btn-secondary btn-small">
                 <span class="btn-text d-none d-lg-block">Стать партнером</span>
                 <span class="btn-icon">
                     <svg class="svg" width="24px" height="14px">
                         <use xlink:href="images/icons.svg#lightning"></use>
                     </svg>
                 </span>
-            </button>
+            </a>
             <div class="header-language d-none d-md-block">
                 <div class="d-none d-lg-block">
                     You don’t understand?
@@ -96,14 +96,14 @@
                     </span>
                 </div>
                 <div class="banner-caption">
-                    <button type="button" class="btn btn-secondary">
+                    <a href="https://www.migotoni.com.ua/register" class="btn btn-secondary">
                         <span class="btn-text">Стать партнером</span>
                         <span class="btn-icon">
                             <svg class="svg" width="24px" height="14px">
                                 <use xlink:href="images/icons.svg#lightning"></use>
                             </svg>
                         </span>
-                    </button>
+                    </a>
                     <button type="button" class="btn btn-outline">
                         <span class="btn-text">Подробнее</span>
                         <span class="btn-icon">
@@ -114,7 +114,7 @@
                     </button>
                 </div>
                 <div class="banner-counter">
-                    <div class="banner-counter__count">2500</div>
+                    <div class="banner-counter__count js-counter" data-count="2500">0</div>
                     <div class="banner-counter__description">
                         Совладельцев смогут участвоватьв распределении прибыли от всех направлений
                     </div>
@@ -136,35 +136,311 @@
     </div>
 </div>
 
+<div class="slide">
+    <div class="container">
+        <div class="slide-block">
+            <div class="row no-gutter">
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(max-width: 984px)" srcset="https://via.placeholder.com/688x333.jpg">
+                        <source media="(min-width: 985px)" srcset="https://via.placeholder.com/589">
+                        <img src="https://via.placeholder.com/589" alt="" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-md-8">
+                    <div class="slide-info">
+                        <div class="title">
+                        <span class="title-main">
+                          Участвуй в распределении прибыли!
+                        </span>
+                        </div>
+                        <div class="slide-description">Только 2500 совладельцев смогут участвовать в распределении
+                            прибыли от всех направлений деятельности!
+                        </div>
+                        <div class="slide-caption">
+                            <a href="https://www.migotoni.com.ua/register" class="btn btn-secondary">
+                                <span class="btn-text">Стать партнером</span>
+                                <span class="btn-icon">
+                                <svg class="svg" width="24px" height="14px">
+                                    <use xlink:href="images/icons.svg#lightning"></use>
+                                </svg>
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="price">
+    <div class="container">
+        <div class="row align-content-xl-center">
+            <div class="col-xl-5">
+                <div class="title">
+                    <span class="title-additional">инвестиционный кейс</span>
+                    <span class="title-main">Стоимость доли в компании</span>
+                </div>
+            </div>
+            <div class="col-xl-7">
+                <div class="price-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Кейс</td>
+                            <td>
+                                <span class="d-none d-lg-block">Цена за ед.</span>
+                                <span class="d-lg-none">за ед.</span>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="price-table__price">2 000<span class="price-table__currency">₴</span> — 4
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">60<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="price-table__price">5 000<span class="price-table__currency">₴</span> — 7
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">50<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="price-table__price">8 000<span class="price-table__currency">₴</span> — 13
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">40<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <div class="price-table__price">14 000<span class="price-table__currency">₴</span> — 27
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">30<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <div class="price-table__price">28 000<span class="price-table__currency">₴</span> — 67
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">24<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <div class="price-table__price">68 000<span class="price-table__currency">₴</span> — 139
+                                    999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">20<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>
+                                <div class="price-table__price">140 000<span class="price-table__currency">₴</span> —
+                                    279 999<span class="price-table__currency">₴</span></div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">
+                                    15
+                                    <span class="price-table__currency">₴</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="price-table__price">
+                                        <span class="price-table__currency">от</span> 280 000<span class="price-table__currency">₴</span>
+                                    </div>
+                                    <div class="badge is--vip">
+                                        <div class="badge-icon">VIP club</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price-table__chunk">11<span class="price-table__currency">₴</span></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="graph d-none d-lg-block">
+    <div class="container">
+        <div class="graph-block">
+            <div class="graph-header">
+                <div class="title">
+                    <span class="title-additional">Диаграмма</span>
+                    <span class="title-main">Изменения стоимости долей</span>
+                </div>
+                <div class="graph-header__info">
+                    <div class="badge">
+                        <div class="badge-title">План</div>
+                        <div class="badge-icon">30%</div>
+                    </div>
+                    <div class="badge is--brown">
+                        <div class="badge-title">Факт</div>
+                        <div class="badge-icon">100%</div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/graph.svg" alt="" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="container">
+        <div class="slide-block">
+            <div class="row no-gutter">
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(max-width: 984px)" srcset="https://via.placeholder.com/688x333.jpg">
+                        <source media="(min-width: 985px)" srcset="https://via.placeholder.com/589">
+                        <img src="https://via.placeholder.com/589" alt="" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-md-8">
+                    <div class="slide-info">
+                        <div class="title">
+                        <span class="title-main d-flex flex-column">
+                            <span>Скачать текущую</span>
+                            <span>версию приложения</span>
+                        </span>
+                        </div>
+                        <div class="slide-description">Уже сейчас ты можешь посмотреть и протестировать текущую версию
+                            приложения, скачивай с Google Play или App Store
+                        </div>
+                        <div class="slide-caption">
+                            <a href="#" class="btn btn-secondary">
+                                <span class="btn-text">Google Play</span>
+                                <span class="btn-icon">
+                                <svg class="svg" width="26px" height="27px">
+                                    <use xlink:href="images/icons.svg#play_market"></use>
+                                </svg>
+                            </span>
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <span class="btn-text">App Store</span>
+                                <span class="btn-icon">
+                                    <svg class="svg" width="28px" height="34px">
+                                        <use xlink:href="images/icons.svg#apple"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="form">
     <div class="container">
         <div class="row">
-            <div class="col-xl-7 col-md-6">
+            <div class="col-xl-7 col-lg-6">
                 <div class="form-info">
-                    <img src="images/form_image.jpg" alt="" class="img-fluid">
+                    <img src="images/form.jpg" alt="" class="img-fluid">
                     <div class="form-info__block">
                         <div class="title">
                             <span class="title-main">Уже сейчас мы предлагаем вам возможность стать партнером проекта MIGOTO NI!</span>
                         </div>
                         <div class="form-counter">
-                            <div class="form-counter__count">2500</div>
+                            <div class="form-counter__count js-counter" data-count="2500">0</div>
                             <div class="form-counter__description">
                                 Совладельцев смогут участвоватьв распределении прибыли от всех направлений
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary">
+                        <a href="https://www.migotoni.com.ua/register" class="btn btn-secondary">
                             <span class="btn-text">Стать партнером</span>
                             <span class="btn-icon">
-                            <svg class="svg" width="24px" height="14px">
-                                <use xlink:href="images/icons.svg#lightning"></use>
-                            </svg>
-                        </span>
-                        </button>
+                                <svg class="svg" width="24px" height="14px">
+                                    <use xlink:href="images/icons.svg#lightning"></use>
+                                </svg>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-md-6">
-
+            <div class="col-xl-5 col-lg-6">
+                <div class="form-info__form">
+                    <div class="title">
+                        <span class="title-additional">Форма</span>
+                        <span class="title-main">Получить консультацию</span>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Имя">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Фамилия">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="+380">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Комментарий" rows="1"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder="Дата">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="time" class="form-control" placeholder="Время">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-info__privacy">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="form-privacy">
+                                <label class="custom-control-label" for="form-privacy">
+                                    Я соглашаюсь с условиями <a href="#">политики конфиденциальности</a>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline">
+                            <span class="btn-text">Отправить</span>
+                            <span class="btn-icon">
+                            <svg class="svg" width="18px" height="16px">
+                                <use xlink:href="images/icons.svg#arrow"></use>
+                            </svg>
+                        </span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -216,8 +492,8 @@
                                 <a href="#" class="btn btn-outline btn-small">
                                     <span class="btn-text">Instagram</span>
                                     <span class="btn-icon">
-                                <img src="images/icons/instagram.svg" alt="" width="22px" height="22px">
-                            </span>
+                                        <img src="images/icons/instagram.svg" alt="" width="22px" height="22px">
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -305,14 +581,14 @@
             <div class="header-language">
                 Try <a href="#">English</a>
             </div>
-            <button type="button" class="header-partner btn btn-secondary btn-small">
+            <a href="https://www.migotoni.com.ua/register" class="header-partner btn btn-secondary btn-small">
                 <span class="btn-text">Стать партнером</span>
                 <span class="btn-icon">
                     <svg class="svg" width="24px" height="14px">
                         <use xlink:href="images/icons.svg#lightning"></use>
                     </svg>
                 </span>
-            </button>
+            </a>
         </div>
     </div>
 </div>
