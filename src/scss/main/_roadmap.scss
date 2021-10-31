@@ -1,4 +1,18 @@
 .roadmap {
+    margin-top: 80px;
+    @include media-breakpoint-up(sm) {
+        margin-top: 150px;
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: 120px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-top: 200px;
+    }
+
     .title {
         text-align: left;
     }
@@ -12,14 +26,7 @@
 }
 
 .roadmap-play {
-    width: 41px;
-    flex-shrink: 0;
-    height: 41px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(38, 38, 44, 0.2);
-    border-radius: 10px;
+    margin-left: 50px;
 }
 
 .roadmap-body {

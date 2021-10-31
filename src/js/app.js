@@ -1,5 +1,17 @@
 import $ from "jquery";
 
+require("@fancyapps/fancybox")
+
+// FANCYBOX
+const data_fancybox = $("[data-fancybox]");
+
+if(data_fancybox.length > 0) {
+    data_fancybox.fancybox({
+        touch: false,
+        protect: true
+    });
+}
+
 // MENU
 $(".js-openMenu").on("click", function () {
     $(this).toggleClass("is--open")

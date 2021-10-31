@@ -3,6 +3,7 @@ import paths from './paths';
 import mode from "gulp-mode";
 import webpackStream from 'webpack-stream';
 import named from 'vinyl-named';
+import webpack from "webpack";
 
 const scripts = () => {
     return gulp
@@ -10,6 +11,15 @@ const scripts = () => {
         .pipe(named())
         .pipe(webpackStream({
             mode: mode().development() ? 'development' : 'production',
+            plugins: [
+                new webpack.ProvidePlugin({
+                    '$': 'jquery',
+                    jquery: 'jquery',
+                    jQuery: 'jquery',
+                    'window.jquery': 'jquery',
+                    'window.jQuery': 'jquery',
+                })
+            ],
             optimization: {
                 splitChunks: {
                     cacheGroups: {

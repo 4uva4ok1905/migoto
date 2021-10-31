@@ -40,14 +40,16 @@ $utilities: map-get-multiple(
 @import "components/header";
 @import "components/footer";
 @import "components/mobile_menu";
+@import "components/slide";
+@import "components/fancybox";
 
 @import "main/contact";
 @import "main/banner";
 @import "main/mission";
 @import "main/form";
-@import "main/slide";
 @import "main/graph";
 @import "main/price";
 @import "main/roadmap";
+@import "main/slide_apps";
 
 @import "font";

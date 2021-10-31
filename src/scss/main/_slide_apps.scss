@@ -1,0 +1,32 @@
+.slide-apps {
+    position: relative;
+    overflow: hidden;
+    padding-top: 210px;
+    margin-top: -75px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 270px;
+        margin-top: 0;
+    }
+    @include media-breakpoint-up(md) {
+        padding-top: 230px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 250px;
+    }
+    @include media-breakpoint-up(xl) {
+        // TODO
+        padding-top: 340px;
+    }
+
+    &:before {
+        content: "";
+        background-image: url("../images/line/apps.svg");
+        position: absolute;
+        left: auto;
+        top: 0;
+        right: auto;
+        width: 100%;
+        height: 150px;
+        background-position: center;
+    }
+}
