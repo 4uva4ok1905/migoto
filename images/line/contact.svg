@@ -1,9 +1,12 @@
 <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M-9.5 1C421.167 59.1667 1435.2 85 1938 23" stroke="url(#paint0_radial_122:283)" stroke-opacity="0.7" stroke-width="2"/>
-<defs>
-<radialGradient id="paint0_radial_122:283" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1158.05 33.7888) rotate(164.789) scale(176.786 399.506)">
-<stop stop-color="#C0C2CE"/>
-<stop offset="1" stop-color="#C0C2CE" stop-opacity="0"/>
-</radialGradient>
-</defs>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1938.12 23.9835C1435.22 85.9956 421.103 60.1582 -9.63385 1.982L-9.36615 0C421.23 58.1571 1435.18 83.9864 1937.88 21.9985L1938.12 23.9835Z"
+          fill="url(#contact1)" fill-opacity="0.3"/>
+    <defs>
+        <linearGradient id="contact1" x1="1823.5" y1="30.0001" x2="1673.92" y2="615.511"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#C0C2CE"/>
+            <stop offset="1" stop-color="#C0C2CE" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
 </svg>
