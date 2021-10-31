@@ -15,6 +15,9 @@
 
     .title {
         text-align: left;
+        @include media-breakpoint-up(sm) {
+            text-align: center;
+        }
     }
 }
 
@@ -22,18 +25,50 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    position: relative;
+    @include media-breakpoint-up(sm) {
+        justify-content: center;
+        padding: 0 120px 45px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 0 0 65px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 0 0 95px;
+    }
 }
 
 .roadmap-play {
     margin-left: 50px;
+    @include media-breakpoint-up(sm) {
+        margin: 0;
+        position: absolute;
+        right: 0;
+    }
 }
 
 .roadmap-body {
     position: relative;
     overflow: hidden;
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    @include media-breakpoint-up(md) {
+        padding-bottom: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+        flex-flow: row;
+        flex-wrap: wrap;
+        overflow: inherit;
+        padding-bottom: 0;
+    }
 
     &:before {
+        background-repeat: no-repeat;
         content: "";
         position: absolute;
         left: 5px;
@@ -41,12 +76,176 @@
         background-image: url("../images/line/roadmap_01.svg");
         width: 18px;
         height: 632px;
+        @include media-breakpoint-up(sm) {
+            left: calc(50% - 25px);
+            background-image: url("../images/line/roadmap_02.svg");
+            width: 120px;
+            height: 928px;
+            top: 0;
+            bottom: inherit;
+            transform: translate(-50%, 0);
+        }
+        @include media-breakpoint-up(lg) {
+            background-image: url("../images/line/roadmap_03.svg");
+            width: 1224px;
+            height: 120px;
+            right: -50px;
+            top: calc(50% - 25px);
+            transform: translate(0, -50%);
+            left: initial;
+        }
+        @include media-breakpoint-up(xl) {
+            background-image: url("../images/line/roadmap_04.svg");
+            width: 1690px;
+            height: 165px;
+            right: 0;
+            top: calc(50% - 30px);
+        }
     }
 }
 
 .roadmap-item {
     display: flex;
     padding-bottom: 40px;
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+        flex-flow: column;
+        padding-bottom: 0;
+    }
+
+    &:nth-child(even) {
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+            align-self: flex-start;
+        }
+
+        .roadmap-item__icon {
+            @include media-breakpoint-up(sm) {
+                order: 2;
+            }
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(sm) {
+                text-align: right;
+                margin-left: auto;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &:nth-child(odd) {
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+            align-self: flex-end;
+        }
+
+        .roadmap-item__info {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+    }
+
+    &:nth-child(1) {
+        @include media-breakpoint-up(lg) {
+            order: 3;
+            width: 475px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 633px;
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(lg) {
+                margin: 20px 0 0;
+            }
+            @include media-breakpoint-up(xl) {
+                margin: 40px 0 0;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        @include media-breakpoint-up(lg) {
+            order: 1;
+            margin-left: 225px;
+            width: 456px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-left: 300px;
+            width: 673px;
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(lg) {
+                text-align: left;
+                margin: 0 0 20px;
+            }
+            @include media-breakpoint-up(xl) {
+                margin: 0 0 40px;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        @include media-breakpoint-up(lg) {
+            order: 4;
+            width: 440px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 692px;
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(lg) {
+                margin: 20px 0 0;
+            }
+            @include media-breakpoint-up(xl) {
+                margin: 40px 0 0;
+            }
+        }
+    }
+
+    &:nth-child(4) {
+        @include media-breakpoint-up(lg) {
+            order: 2;
+            width: calc(100% - 456px - 225px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: calc(100% - 300px - 673px);
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(lg) {
+                text-align: left;
+                margin: 0 0 20px;
+            }
+            @include media-breakpoint-up(xl) {
+                margin: 0 0 40px;
+            }
+        }
+    }
+
+    &:nth-child(5) {
+        @include media-breakpoint-up(lg) {
+            order: 5;
+            width: calc(100% - 475px - 440px);
+        }
+        @include media-breakpoint-up(xl) {
+            width: calc(100% - 633px - 692px);
+        }
+
+        .roadmap-item__info {
+            @include media-breakpoint-up(lg) {
+                margin: 20px 0 0;
+            }
+            @include media-breakpoint-up(xl) {
+                margin: 40px 0 0;
+            }
+        }
+    }
 }
 
 .roadmap-item__icon {
@@ -61,12 +260,38 @@
     justify-content: center;
     position: relative;
     z-index: 1;
+    @include media-breakpoint-up(sm) {
+        width: 60px;
+        height: 60px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: 84px;
+        height: 84px;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
 
 .roadmap-item__date {
     font-size: 12px;
+    font-weight: normal;
     color: $color-brown;
     padding-bottom: 5px;
+    @include media-breakpoint-up(sm) {
+        font-size: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 20px;
+    }
 }
 
 .roadmap-item__title {
@@ -74,10 +299,26 @@
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     padding-bottom: 5px;
+    @include media-breakpoint-up(sm) {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 36px;
+        padding-bottom: 15px;
+    }
 }
 
 .roadmap-item__description {
     font-size: 14px;
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+        max-width: 300px;
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 380px;
+        font-size: 24px;
+    }
 }
 
 .roadmap-item__info {

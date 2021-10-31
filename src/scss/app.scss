@@ -11,22 +11,22 @@
 @import "node_modules/bootstrap/scss/utilities";
 
 $utilities: map-get-multiple(
-                $utilities,
-                        (
-                                "display",
-                                "order",
-                                "flex",
-                                "flex-direction",
-                                "flex-grow",
-                                "flex-shrink",
-                                "flex-wrap",
-                                "justify-content",
-                                "align-items",
-                                "align-content",
-                                "align-self",
-                                "margin-end",
-                                "margin-start",
-                        )
+        $utilities,
+            (
+                "display",
+                "order",
+                "flex",
+                "flex-direction",
+                "flex-grow",
+                "flex-shrink",
+                "flex-wrap",
+                "justify-content",
+                "align-items",
+                "align-content",
+                "align-self",
+                "margin-end",
+                "margin-start",
+            )
 );
 
 @import "node_modules/bootstrap/scss/utilities/api";
@@ -42,6 +42,7 @@ $utilities: map-get-multiple(
 @import "components/mobile_menu";
 @import "components/slide";
 @import "components/fancybox";
+@import "components/aos";
 
 @import "main/contact";
 @import "main/banner";
@@ -51,5 +52,7 @@ $utilities: map-get-multiple(
 @import "main/price";
 @import "main/roadmap";
 @import "main/slide_apps";
+@import "main/benefits";
+@import "main/question";
 
 @import "font";

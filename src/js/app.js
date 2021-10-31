@@ -1,11 +1,19 @@
 import $ from "jquery";
+import * as AOS from "aos/dist/aos";
 
 require("@fancyapps/fancybox")
+
+AOS.init({
+    offset: 250,
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+});
 
 // FANCYBOX
 const data_fancybox = $("[data-fancybox]");
 
-if(data_fancybox.length > 0) {
+if (data_fancybox.length > 0) {
     data_fancybox.fancybox({
         touch: false,
         protect: true
