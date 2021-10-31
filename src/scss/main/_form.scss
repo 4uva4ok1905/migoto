@@ -36,6 +36,7 @@
 .form-info {
     background: #F8F8F8;
     border-radius: 20px;
+    overflow: hidden;
     @include media-breakpoint-up(lg) {
         margin-right: 20px;
     }
@@ -44,7 +45,18 @@
     }
 
     img {
+        transition: transform 0.5s;
         width: 100%;
+        animation: anim-form 10s infinite ease-in-out;
+    }
+}
+
+@keyframes anim-form {
+    0%, to {
+        transform: scale(1)
+    }
+    50% {
+        transform: scaleX(1.025)
     }
 }
 

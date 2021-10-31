@@ -1,0 +1,9 @@
+<svg width="1920" height="129" viewBox="0 0 1920 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1920 41.4999C1857.4 18.8333 1659.99 -12.9001 1371.14 41.4999C1010.08 109.5 527.5 157.827 315.994 105.5C223 82.4933 67.6056 26.5 0 1" stroke="url(#phone021)" stroke-opacity="0.3"/>
+<defs>
+<linearGradient id="phone021" x1="112.989" y1="64.5304" x2="700.388" y2="906.299" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C0C2CE"/>
+<stop offset="1" stop-color="#C0C2CE"/>
+</linearGradient>
+</defs>
+</svg>
