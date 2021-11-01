@@ -272,6 +272,9 @@
     @include media-breakpoint-up(lg) {
         margin: 0 0 40px;
     }
+    @include media-breakpoint-up(xl) {
+        padding: 60px 60px 30px;
+    }
 
     &.is--messenger {
         padding-bottom: 200px;
@@ -294,6 +297,10 @@
             background-image: url("../images/about14.png");
             height: calc(50% - 40px);
         }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 30px;
+            background-image: url("../images/about15.png");
+        }
 
         .about-additional__body{
             @include media-breakpoint-up(sm) {
@@ -304,6 +311,9 @@
             }
             @include media-breakpoint-up(lg) {
                 max-width: 335px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: 490px;
             }
         }
     }
@@ -325,9 +335,13 @@
             background-image: url("../images/about23.png");
         }
         @include media-breakpoint-up(lg) {
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             background-image: url("../images/about24.png");
             height: calc(50% - 40px);
+        }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 30px;
+            background-image: url("../images/about25.png");
         }
 
         .about-additional__body{
@@ -339,6 +353,9 @@
             }
             @include media-breakpoint-up(lg) {
                 max-width: 335px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: 490px;
             }
         }
     }
@@ -361,6 +378,10 @@
             padding-bottom: 447px;
             background-image: url("../images/about34.png");
         }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 558px;
+            background-image: url("../images/about35.png");
+        }
     }
 
     &.is--market {
@@ -380,6 +401,10 @@
         @include media-breakpoint-up(lg) {
             padding-bottom: 427px;
             background-image: url("../images/about44.png");
+        }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 503px;
+            background-image: url("../images/about45.png");
         }
     }
 
@@ -404,6 +429,10 @@
             background-image: url("../images/about54.png");
             height: calc(50% - 40px);
         }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 30px;
+            background-image: url("../images/about55.png");
+        }
 
         .about-additional__body{
             @include media-breakpoint-up(sm) {
@@ -414,6 +443,9 @@
             }
             @include media-breakpoint-up(lg) {
                 max-width: 335px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: 490px;
             }
         }
     }
@@ -439,6 +471,10 @@
             background-image: url("../images/about64.png");
             height: calc(50% - 40px);
         }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 30px;
+            background-image: url("../images/about65.png");
+        }
 
         .about-additional__body{
             @include media-breakpoint-up(sm) {
@@ -450,6 +486,9 @@
             @include media-breakpoint-up(lg) {
                 max-width: 335px;
             }
+            @include media-breakpoint-up(xl) {
+                max-width: 490px;
+            }
         }
     }
 }
@@ -458,6 +497,9 @@
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 20px;
+    }
 }
 
 .about-additional__icon {
@@ -474,11 +516,19 @@
         height: 42px;
         margin-right: 10px;
     }
+    @include media-breakpoint-up(xl) {
+        margin-right: 15px;
+        width: 58px;
+        height: 58px;
+    }
 
     svg {
         width: 15px;
         @include media-breakpoint-up(sm) {
             width: 20px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: auto;
         }
     }
 }
@@ -493,10 +543,16 @@
     @include media-breakpoint-up(sm) {
         font-size: 24px;
     }
+    @include media-breakpoint-up(xl) {
+        font-size: 36px;
+    }
 }
 
 .about-additional__body {
     font-size: 14px;
+    @include media-breakpoint-up(xl) {
+        font-size: 18px;
+    }
 
     p {
         margin-bottom: 10px;
@@ -508,6 +564,9 @@
         }
         @include media-breakpoint-up(lg) {
             margin-bottom: 15px
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 30px
         }
     }
 }
