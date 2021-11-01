@@ -41,9 +41,10 @@
     text-align: center;
     margin-left: -10px;
     margin-right: -10px;
+    margin-bottom: 15px;
     @include media-breakpoint-up(sm) {
-        margin: 0;
         padding: 30px 40px 40px;
+        margin: 0 0 20px;
     }
     @include media-breakpoint-up(md) {
         text-align: left;
@@ -52,6 +53,7 @@
     @include media-breakpoint-up(lg) {
         text-align: left;
         padding: 40px 0 40px 40px;
+        margin-bottom: 40px;
     }
     @include media-breakpoint-up(xl) {
         padding: 60px 0 80px 80px;
@@ -253,5 +255,259 @@
         height: 84px;
         margin-bottom: 15px;
 
+    }
+}
+
+.about-additional {
+    background: #F8F8F8;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 20px 15px 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    @include media-breakpoint-up(sm) {
+        margin: 0 0 20px;
+        padding: 40px 40px 25px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin: 0 0 40px;
+    }
+
+    &.is--messenger {
+        padding-bottom: 200px;
+        background-image: url("../images/about11.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 25px;
+            background-position: right center;
+            background-size: cover;
+            background-image: url("../images/about12.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 20px;
+            background-image: url("../images/about13.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 25px;
+            background-image: url("../images/about14.png");
+            height: calc(50% - 40px);
+        }
+
+        .about-additional__body{
+            @include media-breakpoint-up(sm) {
+               max-width: 335px;
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 425px
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 335px;
+            }
+        }
+    }
+
+    &.is--conference {
+        padding-bottom: 200px;
+        background-image: url("../images/about21.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 25px;
+            background-size: cover;
+            background-position: right center;
+            background-image: url("../images/about22.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 20px;
+            background-image: url("../images/about23.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 20px;
+            background-image: url("../images/about24.png");
+            height: calc(50% - 40px);
+        }
+
+        .about-additional__body{
+            @include media-breakpoint-up(sm) {
+                max-width: 335px;
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 425px
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 335px;
+            }
+        }
+    }
+
+    &.is--wallet {
+        padding-bottom: 354px;
+        background-image: url("../images/about31.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 467px;
+            background-image: url("../images/about32.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 417px;
+            background-image: url("../images/about33.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 447px;
+            background-image: url("../images/about34.png");
+        }
+    }
+
+    &.is--market {
+        padding-bottom: 314px;
+        background-image: url("../images/about41.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 447px;
+            background-image: url("../images/about42.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 417px;
+            background-image: url("../images/about43.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 427px;
+            background-image: url("../images/about44.png");
+        }
+    }
+
+    &.is--investment {
+        padding-bottom: 201px;
+        background-image: url("../images/about51.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 25px;
+            background-size: cover;
+            background-position: right center;
+            background-image: url("../images/about52.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 20px;
+            background-image: url("../images/about53.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 25px;
+            background-image: url("../images/about54.png");
+            height: calc(50% - 40px);
+        }
+
+        .about-additional__body{
+            @include media-breakpoint-up(sm) {
+                max-width: 335px;
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 425px
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 335px;
+            }
+        }
+    }
+
+    &.is--credit {
+        padding-bottom: 221px;
+        background-image: url("../images/about61.png");
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 25px;
+            background-size: cover;
+            background-position: right center;
+            background-image: url("../images/about62.png");
+        }
+        @include media-breakpoint-up(md) {
+            padding-bottom: 20px;
+            background-image: url("../images/about63.png");
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 25px;
+            background-image: url("../images/about64.png");
+            height: calc(50% - 40px);
+        }
+
+        .about-additional__body{
+            @include media-breakpoint-up(sm) {
+                max-width: 335px;
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 425px
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 335px;
+            }
+        }
+    }
+}
+
+.about-additional__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.about-additional__icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(38, 38, 44, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    @include media-breakpoint-up(sm) {
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+    }
+
+    svg {
+        width: 15px;
+        @include media-breakpoint-up(sm) {
+            width: 20px;
+        }
+    }
+}
+
+.about-additional__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    background: linear-gradient(45deg, #0A0911 0%, rgba(10, 9, 17, 0.76) 76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-primary;
+    @include media-breakpoint-up(sm) {
+        font-size: 24px;
+    }
+}
+
+.about-additional__body {
+    font-size: 14px;
+
+    p {
+        margin-bottom: 10px;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 15px
+        }
+        @include media-breakpoint-up(md) {
+            margin-bottom: 20px
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 15px
+        }
     }
 }
