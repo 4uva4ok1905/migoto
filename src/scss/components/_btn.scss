@@ -71,9 +71,12 @@
 
     &.btn-small {
         height: 55px;
-        font-size: 16px;
+        font-size: 14px;
         @include media-breakpoint-up(lg) {
             height: 62px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 16px;
         }
 
         .btn-text {

@@ -21,7 +21,7 @@
         margin-top: 120px;
     }
 
-    &:before{
+    &:before {
         content: "";
         background-image: url("../images/line/contact.svg");
         position: absolute;
@@ -57,9 +57,12 @@
 .contact-social {
     background: #F8F8F8;
     border-radius: 20px;
-    padding: 20px 15px 30px;
+    padding: 20px 15px 10px;
+    margin-left: -15px;
+    margin-right: -15px;
     @include media-breakpoint-up(sm) {
         padding: 30px 40px;
+        margin: 0;
     }
     @include media-breakpoint-up(md) {
         padding: 40px 60px;
@@ -73,6 +76,7 @@
     font-size: 15px;
     text-align: center;
     padding-bottom: 10px;
+    width: 100%;
     @include media-breakpoint-up(sm) {
         text-align: left;
     }
@@ -83,14 +87,55 @@
 }
 
 .contact-social__item {
-    margin: 0 auto;
     width: 100%;
     max-width: 320px;
+    margin: 0 auto 20px;
+    @include media-breakpoint-up(sm) {
+        margin: 0;
+    }
     @include media-breakpoint-up(xl) {
         padding-bottom: 0;
     }
 
     .btn {
         width: 100%;
+    }
+
+    &.is--email {
+        width: 245px;
+        @include media-breakpoint-up(sm) {
+            width: 275px;
+        }
+
+        .btn-text {
+            padding: 0;
+        }
+    }
+
+    &.is--telegram {
+        width: 55px;
+
+        @include media-breakpoint-up(sm) {
+            width: 85px;
+            position: relative;
+        }
+
+        &:before {
+            @include media-breakpoint-up(sm) {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                width: 1px;
+                height: 35px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
+            }
+        }
+
+        .btn {
+            @include media-breakpoint-up(sm) {
+                width: auto;
+            }
+        }
     }
 }

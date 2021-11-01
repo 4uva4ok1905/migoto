@@ -92,6 +92,7 @@ $("form").on("submit", function (e) {
 
             if (json['success']) {
                 _this.trigger("reset");
+                $('[type="date"], [type="time"]')
             } else {
                 if (json['error']) {
                     for (let i in json['error']) {
@@ -108,6 +109,7 @@ $("form").on("submit", function (e) {
 
 $('[type="date"], [type="time"]').change(function () {
     if (!$(this).val()) {
+        $(this).val("");
         $(this).parent().addClass("is--empty")
     } else {
         $(this).parent().removeClass("is--empty")
