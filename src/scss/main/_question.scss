@@ -74,6 +74,7 @@
 .question-body__item {
     position: relative;
     margin-bottom: 50px;
+    overflow: hidden;
     @include media-breakpoint-up(sm) {
         margin-bottom: 105px;
     }
@@ -230,10 +231,10 @@
     }
 }
 
-
 .question-body__item__image {
     position: relative;
     min-height: 313px;
+    overflow: hidden;
     @include media-breakpoint-up(sm) {
         min-height: 547px;
     }
