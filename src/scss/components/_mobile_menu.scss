@@ -3,10 +3,6 @@ body.is--menu-open {
     touch-action: none;
 
     .header {
-        &.is--fixed {
-            background-color: transparent;
-        }
-
         .header-partner {
             display: none;
         }

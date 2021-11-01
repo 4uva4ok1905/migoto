@@ -119,3 +119,48 @@
     color: #fff;
     background-color: $color-brown;
 }
+
+
+.form-group.is--empty {
+    .form-control {
+        color: transparent;
+    }
+
+    label {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        opacity: 1;
+        font-size: 14px;
+        color: #6C707B;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            bottom: 20px;
+            text-align: left;
+        }
+        @include media-breakpoint-up(xl) {
+            bottom: 25px;
+        }
+    }
+}
+
+.form-group {
+    .form-control {
+        &:focus {
+            color: $color-primary;
+
+            & + label {
+                display: none;
+            }
+        }
+    }
+
+    label {
+        display: none;
+    }
+}

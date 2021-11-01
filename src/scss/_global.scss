@@ -25,19 +25,10 @@ input::-ms-clear {
     outline: none !important;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-inner-spin-button,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
-
 input[type="date"],
 input[type="time"] {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    content: attr(placeholder);
 }
 
 body {

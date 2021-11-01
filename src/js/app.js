@@ -3,6 +3,7 @@ import * as AOS from "aos/dist/aos";
 
 require("@fancyapps/fancybox")
 
+// ANIMATION SCROLL
 AOS.init({
     offset: 250,
     duration: 600,
@@ -45,6 +46,7 @@ $(window).scroll(function () {
         $header.removeClass("is--fixed")
     }
 
+    // COUNTER ON SCROLL
     $(".js-counter:not(.is--finish)").each(function () {
         if (scrollTop > $(this).offset().top - window.innerHeight) {
             $(this).addClass("is--finish");
@@ -72,3 +74,46 @@ function startCounter($el) {
         }
     }, 25);
 }
+
+// FORM
+$("form").on("submit", function (e) {
+    e.preventDefault();
+
+    const _this = $(this);
+    const data = _this.serialize()
+
+    $.ajax({
+        type: "POST",
+        url: "https://fero.com.ua/mail.php",
+        data: data,
+        success: function (json) {
+
+            _this.find(".is--error").removeClass("is--error");
+
+            if (json['success']) {
+                _this.trigger("reset");
+            } else {
+                if (json['error']) {
+                    for (let i in json['error']) {
+                        const element = _this.find('[name="' + i + '"]')
+
+                        element.addClass("is--error")
+                    }
+                }
+
+            }
+        }
+    });
+})
+
+$('[type="date"], [type="time"]').change(function () {
+    if (!$(this).val()) {
+        $(this).parent().addClass("is--empty")
+    } else {
+        $(this).parent().removeClass("is--empty")
+    }
+}).blur(function () {
+    if (!$(this).val()) {
+        $(this).val("");
+    }
+}).trigger("change");

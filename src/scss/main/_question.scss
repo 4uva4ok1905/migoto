@@ -186,6 +186,9 @@
     flex-shrink: 0;
     margin-top: 10px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include media-breakpoint-up(sm) {
         margin-right: 15px;
         margin-bottom: 0;

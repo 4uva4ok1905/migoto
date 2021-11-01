@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Headers: X-Requested-With");
 
 $json = [];
 
@@ -12,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $json['error']['phone'] = "Error Phone";
     }
 
-    if (!isset($_POST['country']) || empty($_POST['country'])) {
-        $json['error']['country'] = "Error Country";
+    if (!isset($_POST['surname']) || empty($_POST['surname'])) {
+        $json['error']['surname'] = "Error Surname";
     }
 
     if (!isset($json['error'])) {
@@ -29,31 +32,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ';
 
         if (isset($_POST['name']) && !empty($_POST['name'])) {
-            $message .= ' <p>Ф.И.О: ' . $_POST['name'] . '</p>';
+            $message .= ' <p>Имя: ' . $_POST['name'] . '</p>';
+        }
+
+        if (isset($_POST['surname']) && !empty($_POST['surname'])) {
+            $message .= ' <p>Фамилия: ' . $_POST['surname'] . '</p>';
         }
 
         if (isset($_POST['phone']) && !empty($_POST['phone'])) {
             $message .= ' <p>Телефон: ' . $_POST['phone'] . '</p>';
         }
 
-        if (isset($_POST['social']) && !empty($_POST['social'])) {
-            $message .= ' <p>Тип: ' . $_POST['social'] . '</p>';
-        }
-
-        if (isset($_POST['country']) && !empty($_POST['country'])) {
-            $message .= ' <p>Местоположение: ' . $_POST['country'] . '</p>';
-        }
-
         if (isset($_POST['date']) && !empty($_POST['date'])) {
-            $message .= ' <p>E-mail: ' . $_POST['date'] . '</p>';
+            $message .= ' <p>Дата: ' . $_POST['date'] . '</p>';
         }
 
         if (isset($_POST['time']) && !empty($_POST['time'])) {
             $message .= ' <p>Время: ' . $_POST['time'] . '</p>';
         }
 
-        if (isset($_POST['message']) && !empty($_POST['message'])) {
-            $message .= ' <p>Сообщение: ' . $_POST['message'] . '</p>';
+        if (isset($_POST['comment']) && !empty($_POST['comment'])) {
+            $message .= ' <p>Сообщение: ' . $_POST['comment'] . '</p>';
         }
 
         $message .= '
