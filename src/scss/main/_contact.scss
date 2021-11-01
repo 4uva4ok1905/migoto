@@ -60,9 +60,13 @@
     padding: 20px 15px 10px;
     margin-left: -15px;
     margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     @include media-breakpoint-up(sm) {
         padding: 30px 40px;
         margin: 0;
+        flex-wrap: nowrap;
     }
     @include media-breakpoint-up(md) {
         padding: 40px 60px;
@@ -70,6 +74,7 @@
     }
     @include media-breakpoint-up(lg) {
         padding: 40px;
+        margin: 0;
     }
 }
 
@@ -89,58 +94,94 @@
 
 .contact-social__item {
     width: 100%;
-    max-width: 320px;
     margin: 0 auto 20px;
+    text-align: center;
+    flex-shrink: 0;
     @include media-breakpoint-up(sm) {
         margin: 0;
     }
-    @include media-breakpoint-up(xl) {
-        padding-bottom: 0;
-    }
 
     .btn {
-        width: 100%;
+        max-width: 320px;
     }
 
     &.is--email {
-        width: 245px;
+        margin-right: 0;
+        width: auto;
+
+        .btn {
+            width: 259px;
+            @include media-breakpoint-up(sm) {
+                width: 275px;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 318px;
+            }
+        }
+    }
+
+    &.is--instagram {
         @include media-breakpoint-up(sm) {
-            width: 275px;
+            margin-left: auto;
+            width: auto;
         }
 
-        @include media-breakpoint-only(xs) {
-            .btn-text {
-                padding: 0;
+        .btn {
+            width: 320px;
+            @include media-breakpoint-up(sm) {
+                width: 197px;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 226px;
             }
         }
     }
 
     &.is--telegram {
-        width: 55px;
-
+        margin-left: 6px;
+        width: auto;
         @include media-breakpoint-up(sm) {
-            width: 80px;
             position: relative;
+            margin-left: 20px;
         }
         @include media-breakpoint-up(md) {
-            width: 100px;
+            margin-left: 40px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-left: 20px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-left: 70px;
+        }
+
+        .btn {
+            width: 55px;
+            @include media-breakpoint-up(lg) {
+                width: 62px;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 221px;
+            }
         }
 
         &:before {
             @include media-breakpoint-up(sm) {
                 content: "";
                 position: absolute;
-                right: 0;
+                right: -30px;
                 bottom: 10px;
                 width: 1px;
                 height: 35px;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
             }
-        }
-
-        .btn {
-            @include media-breakpoint-up(sm) {
-                width: auto;
+            @include media-breakpoint-up(md) {
+                right: -49px;
+            }
+            @include media-breakpoint-up(lg) {
+                right: -27px;
+            }
+            @include media-breakpoint-up(xl) {
+               display: none;
             }
         }
     }

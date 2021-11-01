@@ -124,6 +124,12 @@
 .form-group.is--empty {
     .form-control {
         color: transparent;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator{
+            display: none;
+            -webkit-appearance: none;
+        }
     }
 
     label {
@@ -156,6 +162,12 @@
 
             & + label {
                 display: none;
+            }
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-calendar-picker-indicator{
+                display: block;
+                -webkit-appearance: initial;
             }
         }
     }
