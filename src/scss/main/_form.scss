@@ -168,6 +168,7 @@
         position: relative;
         margin-right: 30px;
         font-size: 72px;
+        width: 150px;
     }
     @include media-breakpoint-up(md) {
         font-size: 100px;
