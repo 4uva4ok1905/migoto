@@ -13,17 +13,24 @@
 }
 
 .badge-title {
-    font-size: 18px;
     color: #000000;
     padding-right: 10px;
     font-weight: normal;
+    font-size: 14px;
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+    }
+
 }
 
 .badge-icon {
     font-weight: bold;
-    font-size: 18px;
     color: #FFFFFF;
     padding: 8px 10px;
     background: #4C4C4C;
     border-radius: 5px;
+    font-size: 14px;
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+    }
 }

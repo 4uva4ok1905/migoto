@@ -894,7 +894,12 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/graph.svg" alt="" class="img-fluid">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/graph_03.svg">
+                    <source media="(max-width: 1023px)" srcset="images/graph_02.svg">
+                    <source media="(min-width: 1840px)" srcset="images/graph_01.svg">
+                    <img src="images/graph_01.svg" alt="" class="img-fluid">
+                </picture>
             </div>
         </div>
     </div>
