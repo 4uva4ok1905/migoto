@@ -69,6 +69,7 @@ body {
                 background-image: url("../images/test2.jpg");
             }
             @include media-breakpoint-up(xl) {
+                background-size: cover;
                 background-image: url("../images/test.jpg");
             }
         }
