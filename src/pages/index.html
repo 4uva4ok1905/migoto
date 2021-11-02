@@ -36,24 +36,24 @@
 </head>
 
 
-<body>
-<div class="body-wrapper">
+<body class="is--main">
+<div class="body-wrapper" id="top">
     <header class="header d-flex align-items-center js-header">
         <div class="container">
             <div class="d-flex align-items-center">
-                <div class="header-logo">
+                <a href="#" data-to="#top" class="header-logo js-scroll">
                     <img src="images/logo.svg" alt="logo" class="img-fluid">
-                </div>
+                </a>
                 <nav class="header-menu me-auto d-none d-md-block">
                     <ul class="list-unstyled d-flex">
                         <li>
-                            <a href="#">О приложении</a>
+                            <a href="#" class="js-scroll" data-to="#about">О приложении</a>
                         </li>
                         <li>
-                            <a href="#">Дорожная карта</a>
+                            <a href="#" class="js-scroll" data-to="#roadmap">Дорожная карта</a>
                         </li>
                         <li>
-                            <a href="#">Стоимость</a>
+                            <a href="#" class="js-scroll" data-to="#price">Стоимость</a>
                         </li>
                     </ul>
                 </nav>
@@ -105,7 +105,7 @@
                             </svg>
                         </span>
                         </a>
-                        <button type="button" class="btn btn-outline">
+                        <button type="button" class="btn btn-outline js-scroll" data-to="#about">
                             <span class="btn-text">Подробнее</span>
                             <span class="btn-icon">
                             <svg class="svg" width="18px" height="18px">
@@ -138,7 +138,7 @@
         </div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="container">
             <div class="about-block">
                 <div class="row">
@@ -647,7 +647,7 @@
         </div>
     </div>
 
-    <div class="roadmap">
+    <div class="roadmap" id="roadmap">
         <div class="container">
             <div class="roadmap-header">
                 <div class="title">
@@ -735,7 +735,7 @@
         </div>
     </div>
 
-    <div class="price">
+    <div class="price" id="price">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
@@ -1031,7 +1031,7 @@
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="form-privacy" required>
                                     <label class="custom-control-label" for="form-privacy">
-                                        Я соглашаюсь с условиями <a href="#">политики конфиденциальности</a>
+                                        Я соглашаюсь с условиями <a target="_blank" href="privacy.html">политики конфиденциальности</a>
                                     </label>
                                 </div>
                             </div>
@@ -1121,13 +1121,13 @@
                             <div class="footer-menu">
                                 <ul class="list-unstyled d-flex flex-column flex-sm-row align-items-center justify-content-sm-center">
                                     <li>
-                                        <a href="#">О приложении</a>
+                                        <a href="#" class="js-scroll" data-to="#about">О приложении</a>
                                     </li>
                                     <li>
-                                        <a href="#">Дорожная карта</a>
+                                        <a href="#" class="js-scroll" data-to="#roadmap">Дорожная карта</a>
                                     </li>
                                     <li>
-                                        <a href="#">Стоимость</a>
+                                        <a href="#" class="js-scroll" data-to="#price">Стоимость</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1156,7 +1156,7 @@
                         </div>
                         <div class="col-sm">
                             <div class="footer-policy">
-                                <a href="#">Политика конфиденциальности</a>
+                                <a href="privacy.html" target="_blank">Политика конфиденциальности</a>
                             </div>
                         </div>
                     </div>
@@ -1171,13 +1171,13 @@
                 <nav class="header-menu">
                     <ul class="list-unstyled d-flex flex-column">
                         <li>
-                            <a href="#">О приложении</a>
+                            <a href="#" class="js-scroll" data-to="#about">О приложении</a>
                         </li>
                         <li>
-                            <a href="#">Дорожная карта</a>
+                            <a href="#" class="js-scroll" data-to="#roadmap">Дорожная карта</a>
                         </li>
                         <li>
-                            <a href="#">Стоимость</a>
+                            <a href="#" class="js-scroll" data-to="#price">Стоимость</a>
                         </li>
                     </ul>
                 </nav>

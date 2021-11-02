@@ -32,21 +32,23 @@ input[type="time"] {
 }
 
 body {
-    background-repeat: no-repeat;
-    background-image: url("../images/ellipse/ellipse_01.svg"), url("../images/ellipse/ellipse_02.svg");
-    background-position: 0 0, 100% 100%;
-    padding-bottom: 10px;
-    background-size: 471px;
-    @include media-breakpoint-up(sm) {
-        padding-bottom: 40px;
-    }
-    @include media-breakpoint-up(xl) {
-        padding-bottom: 60px;
-        background-size: 692px;
+    &.is--main {
+        background-repeat: no-repeat;
+        background-image: url("../images/ellipse/ellipse_01.svg"), url("../images/ellipse/ellipse_02.svg");
+        background-position: 0 0, 100% 100%;
+        padding-bottom: 10px;
+        background-size: 471px;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 40px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 60px;
+            background-size: 692px;
+        }
     }
 }
 
-.body-wrapper{
+.body-wrapper {
     overflow: hidden;
 }
 

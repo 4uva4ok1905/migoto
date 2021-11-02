@@ -1,0 +1,40 @@
+.privacy__text {
+    line-height: 1.5;
+    font-size: 14px;
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        @include media-breakpoint-up(sm) {
+            font-size: 24px;
+        }
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        background: linear-gradient(45deg, #0A0911 0%, rgba(10, 9, 17, 0.76) 76%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $color-primary;
+        padding: 0;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(sm) {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+    }
+
+    a {
+        color: $color-brown;
+    }
+}

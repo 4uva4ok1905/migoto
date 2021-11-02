@@ -92,7 +92,7 @@ $("form").on("submit", function (e) {
 
             if (json['success']) {
                 _this.trigger("reset");
-                $('[type="date"], [type="time"]')
+                $('[type="date"], [type="time"]').trigger("blur");
             } else {
                 if (json['error']) {
                     for (let i in json['error']) {
@@ -119,3 +119,14 @@ $('[type="date"], [type="time"]').change(function () {
         $(this).val("");
     }
 }).trigger("change");
+
+$('.js-scroll').on("click", function (e) {
+    e.preventDefault();
+
+    $(".js-openMenu").toggleClass("is--open");
+    $("body").removeClass("is--menu-open");
+    $(".js-mobileMenu").fadeOut();
+
+    const tag = $($(this).data("to"));
+    $('html,body').animate({scrollTop: tag.offset().top}, 'slow');
+})
