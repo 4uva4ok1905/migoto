@@ -1,0 +1,9 @@
+<svg width="1760" height="664" viewBox="0 0 1760 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M871.5 118.5C900.209 88.1307 938.036 57.0859 998.5 32.8449M871.5 118.5V100.5M871.5 118.5H889.5M1644.94 251C1714.93 282.123 1758.5 324 1758.5 407C1758.5 587 1534.5 662.5 1376.5 662.5C1129.5 662.5 996.211 645.067 813 590.5C512.5 501 181.5 496 1 549.5M998.72 239.103C935.003 268.723 896.5 306.196 896.5 344.5C896.5 424.9 1087.5 451.543 1333 429.043C1601.5 404.435 1758.5 315 1758.5 178.5C1758.5 22 1644.94 20 1534.5 1.41016" stroke="url(#bannerbg1)" stroke-opacity="0.7" stroke-width="2"/>
+<defs>
+<radialGradient id="bannerbg1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1036.5 332) rotate(108.281) scale(645.581 1716.27)">
+<stop stop-color="#C0C2CE"/>
+<stop offset="1" stop-color="#C0C2CE" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

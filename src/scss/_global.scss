@@ -32,18 +32,45 @@ input[type="time"] {
 }
 
 body {
+    position: relative;
     &.is--main {
-        background-repeat: no-repeat;
-        background-image: url("../images/ellipse/ellipse_01.svg"), url("../images/ellipse/ellipse_02.svg");
-        background-position: 0 0, 100% 100%;
+        //background-image: url("../images/test.jpg");
+        //background-repeat: no-repeat;
+        //background-image: url("../images/ellipse/ellipse_01.svg"), url("../images/ellipse/ellipse_02.svg");
+        //background-position: 0 0, 100% 100%;
         padding-bottom: 10px;
-        background-size: 471px;
+        //background-size: 471px;
         @include media-breakpoint-up(sm) {
             padding-bottom: 40px;
         }
         @include media-breakpoint-up(xl) {
             padding-bottom: 60px;
-            background-size: 692px;
+            //background-size: 692px;
+        }
+
+        &:before{
+            content: "";
+            background-image: url("../images/test5.jpg");
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include media-breakpoint-up(sm) {
+                background-image: url("../images/test4.jpg");
+            }
+            @include media-breakpoint-up(md) {
+                background-image: url("../images/test3.jpg");
+            }
+            @include media-breakpoint-up(lg) {
+                background-image: url("../images/test2.jpg");
+            }
+            @include media-breakpoint-up(xl) {
+                background-image: url("../images/test.jpg");
+            }
         }
     }
 
@@ -60,6 +87,8 @@ body {
 
 .body-wrapper {
     overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 
 .list-unstyled {

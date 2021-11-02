@@ -53,7 +53,7 @@ $(window).scroll(function () {
             startCounter($(this))
         }
     });
-});
+}).trigger("scroll");;
 
 
 function startCounter($el) {
