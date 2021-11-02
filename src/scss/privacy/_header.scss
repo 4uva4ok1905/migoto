@@ -1,0 +1,45 @@
+.privacy-header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 790px;
+        margin: 0 auto;
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 1134px;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    .btn {
+        svg {
+            transform: rotate(180deg);
+        }
+        .btn-icon::before {
+            @include media-breakpoint-up(sm) {
+                right: 0;
+                left: initial;
+            }
+        }
+    }
+}
+
+.privacy-header-logo {
+    img {
+        max-width: 160px;
+        @include media-breakpoint-up(sm) {
+            max-width: 183px;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: 220px;
+        }
+    }
+}
+

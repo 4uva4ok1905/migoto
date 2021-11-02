@@ -92,7 +92,7 @@ $("form").on("submit", function (e) {
 
             if (json['success']) {
                 _this.trigger("reset");
-                $('[type="date"], [type="time"]').trigger("blur");
+                $('[type="date"], [type="time"]').trigger("change");
             } else {
                 if (json['error']) {
                     for (let i in json['error']) {
@@ -123,7 +123,7 @@ $('[type="date"], [type="time"]').change(function () {
 $('.js-scroll').on("click", function (e) {
     e.preventDefault();
 
-    $(".js-openMenu").toggleClass("is--open");
+    $(".js-openMenu").removeClass("is--open");
     $("body").removeClass("is--menu-open");
     $(".js-mobileMenu").fadeOut();
 
