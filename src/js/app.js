@@ -6,7 +6,7 @@ require("@fancyapps/fancybox")
 // ANIMATION SCROLL
 AOS.init({
     offset: 250,
-    duration: 600,
+    duration: 750,
     easing: 'ease-in-sine',
     delay: 100,
 });
