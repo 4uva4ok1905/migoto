@@ -46,6 +46,16 @@ body {
             background-size: 692px;
         }
     }
+
+    &.is--privacy {
+        padding-bottom: 10px;
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 40px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 60px;
+        }
+    }
 }
 
 .body-wrapper {
