@@ -99,6 +99,8 @@
 }
 
 .benefits-body {
+    position: relative;
+
     & > .row > *:last-child .benefits-item:before {
         display: none;
     }
@@ -106,6 +108,33 @@
     & > .row > *:nth-last-child(2) .benefits-item:before {
         @include media-breakpoint-up(sm) {
             display: none;
+        }
+    }
+
+    &:before {
+        left: calc(100% / 3 - 7px);
+    }
+
+    &:after {
+        left: calc(100% / 3 * 2 + 7px);
+    }
+
+    &:before, &:after {
+        content: "";
+        top: 0;
+        position: absolute;
+        width: 1px;
+        height: 392px;
+        display: none;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 53.65%, rgba(0, 0, 0, 0) 100%);
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 355px;
+        }
+        @include media-breakpoint-up(xl) {
+            height: 525px;
         }
     }
 }

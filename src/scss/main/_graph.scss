@@ -110,3 +110,11 @@
         }
     }
 }
+
+.graph-body{
+    @include media-breakpoint-only(xs) {
+        overflow: auto;
+        margin-left: -22px;
+        margin-right: -75px;
+    }
+}
