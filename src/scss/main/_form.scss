@@ -136,7 +136,6 @@
         flex-flow: row;
         justify-content: center;
         text-align: left;
-        align-items: flex-end;
     }
     @include media-breakpoint-up(md) {
         flex-flow: column;
@@ -150,7 +149,7 @@
     @include media-breakpoint-up(lg) {
         width: auto;
         flex-flow: row;
-        align-items: flex-end;
+        align-items: center;
         margin: 0;
         padding: 0 0 35px;
     }
@@ -163,12 +162,13 @@
     font-family: 'Playfair Display', serif;
     font-size: 64px;
     font-weight: 400;
+    font-feature-settings: 'pnum' on, 'lnum' on;
     @include media-breakpoint-up(sm) {
         flex-shrink: 0;
         position: relative;
         margin-right: 30px;
         font-size: 72px;
-        width: 150px;
+        width: 159px;
     }
     @include media-breakpoint-up(md) {
         font-size: 100px;
