@@ -117,6 +117,16 @@
             @include media-breakpoint-up(xl) {
                 width: 318px;
             }
+
+
+            &:hover {
+                background: #D88538;
+                border-color: #D88538;
+
+                .btn-icon::before {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
         }
     }
 
@@ -128,11 +138,58 @@
 
         .btn {
             width: 320px;
+            position: relative;
             @include media-breakpoint-up(sm) {
                 width: 197px;
             }
             @include media-breakpoint-up(xl) {
                 width: 226px;
+            }
+
+            .btn-icon img {
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            .btn-text{
+                z-index: 2;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                height: 100%;
+                transition: all 0.5s;
+                background: radial-gradient(124.65% 124.65% at 37.17% 100.07%, #FFDD55 0%, #FF543F 32.8%, #FC5245 34.8%, #E64771 50.4%, #D53E91 64.3%, #CC39A4 76.1%, #C837AB 84.1%) no-repeat;
+            }
+
+
+            &:hover {
+                border-color: transparent;
+                background-color: transparent;
+
+                &:before {
+                    opacity: 1;
+                }
+
+                .btn-icon::before {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                .btn-icon img {
+                    &:last-child {
+                        display: block;
+                    }
+
+                    &:first-child {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -156,11 +213,57 @@
 
         .btn {
             width: 55px;
+            position: relative;
             @include media-breakpoint-up(lg) {
                 width: 62px;
             }
             @include media-breakpoint-up(xl) {
                 width: 221px;
+            }
+
+            .btn-icon img {
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                height: 100%;
+                transition: all 0.5s;
+                background: linear-gradient(0deg, #155CDE -16.05%, #1F7FE5 11.75%, #279CEB 40.85%, #2CAFEF 65.95%, #2EB5F0 83.95%) no-repeat;
+            }
+
+            .btn-text{
+                z-index: 2;
+            }
+
+            &:hover {
+                border-color: transparent;
+                background-color: transparent;
+
+                &:before {
+                    opacity: 1;
+                }
+
+                .btn-icon::before {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                .btn-icon img {
+                    &:last-child {
+                        display: block;
+                    }
+
+                    &:first-child {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -181,7 +284,7 @@
                 right: -27px;
             }
             @include media-breakpoint-up(xl) {
-               display: none;
+                display: none;
             }
         }
     }

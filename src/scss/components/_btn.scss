@@ -25,14 +25,37 @@
         background: $color-primary;
         border-color: $color-primary;
         color: #fff;
+
+        &:hover {
+            background: linear-gradient(93.49deg, #0A0911 2.79%, rgba(10, 9, 17, 0.79) 96.69%);
+        }
     }
 
     &.btn-outline {
         color: $color-primary;
         border-color: rgba(38, 38, 44, 0.2);
+        transition: all 0.5s;
 
         .btn-icon:before {
+            transition: all 0.5s;
             background: rgba(38, 38, 44, 0.2);
+        }
+
+        &:hover {
+            color: #fff;
+            background: $color-primary;
+            border-color: $color-primary;
+
+            .btn-icon {
+                &:before {
+                    background: rgba(255, 255, 255, 1);
+                }
+
+                svg {
+                    stroke: white;
+                    fill: white;
+                }
+            }
         }
     }
 
@@ -90,4 +113,30 @@
             }
         }
     }
+}
+
+
+.svg-info {
+    transition: all 0.5s;
+    stroke: #A0A7BB;
+    stroke-width: 1.5;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+}
+
+.svg-play{
+    transition: all 0.5s;
+    stroke: #A0A7BB;
+    fill: #A0A7BB;
+    stroke-width: 2;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+}
+
+.svg-mail {
+    transition: all 0.5s;
+    stroke: #D88538;
+    stroke-width: 1.5;
+    stroke-linecap: square;
+    stroke-linejoin: round;
 }
