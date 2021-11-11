@@ -75,6 +75,23 @@ body {
         }
     }
 
+    &.is--not-found {
+        @include media-breakpoint-up(lg) {
+            min-height: 100vh;
+            background-image: url("../images/404/error_01.jpg");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 183px) 100%;
+            background-size: 575px 584px;
+        }
+        @include media-breakpoint-up(xl) {
+            min-height: 100vh;
+            background-image: url("../images/404/error_02.jpg");
+            background-repeat: no-repeat;
+            background-size: 744px 913px;
+            background-position: calc(100% - 196px) 100%;
+        }
+    }
+
     &.is--privacy {
         padding-bottom: 10px;
         @include media-breakpoint-up(sm) {

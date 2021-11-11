@@ -1,0 +1,91 @@
+.not-found {
+    padding-top: 121px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 252px;
+    }
+    @include media-breakpoint-up(md) {
+        padding-top: 134px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 73px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 120px;
+    }
+}
+
+.not-found__error {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 110%;
+    color: #000000;
+    @include media-breakpoint-up(sm) {
+        font-size: 24px;
+    }
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+}
+
+.not-found__title {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 160px;
+    line-height: 110%;
+    margin-top: -50px;
+    text-align: center;
+    font-feature-settings: 'case' on;
+    background: linear-gradient(45deg, #0A0911 0%, rgba(10, 9, 17, 0.76) 76%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0A0911;
+    @include media-breakpoint-up(sm) {
+        font-size: 200px;
+    }
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 350px;
+    }
+}
+
+.not-found__description {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    max-width: 320px;
+    margin: 0 auto;
+    @include media-breakpoint-up(sm) {
+        max-width: 406px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin: 0;
+        text-align: left;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
+}
+
+.not-found__caption {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+
+    .btn {
+        width: 320px;
+        @include media-breakpoint-up(sm) {
+            width: auto;
+        }
+    }
+}

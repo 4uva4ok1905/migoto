@@ -1,0 +1,27 @@
+.not-found-block {
+    padding-top: 18px;
+    @include media-breakpoint-up(sm) {
+        padding-top: 33px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 60px;
+    }
+}
+
+.not-found-logo {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+
+    img {
+        max-width: 128px;
+        @include media-breakpoint-up(sm) {
+            max-width: 183px;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: 220px;
+        }
+    }
+}
+
