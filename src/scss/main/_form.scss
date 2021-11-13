@@ -1,6 +1,5 @@
 .form {
     position: relative;
-    overflow: hidden;
     padding-top: 200px;
     margin-top: -90px;
     @include media-breakpoint-up(sm) {
@@ -34,6 +33,7 @@
 }
 
 .form-info {
+    height: 100%;
     background: #F8F8F8;
     border-radius: 20px;
     overflow: hidden;
@@ -202,6 +202,7 @@
 }
 
 .form-info__form {
+    position: relative;
     padding-top: 60px;
     padding-left: 10px;
     padding-right: 10px;
@@ -227,6 +228,7 @@
 
 .form-info__privacy {
     font-size: 14px;
+    position: relative;
     padding-bottom: 20px;
     padding-top: 10px;
     @include media-breakpoint-up(sm) {
@@ -241,5 +243,38 @@
     a {
         color: red;
         text-decoration: underline;
+    }
+}
+
+.form-info__privacy-error {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FF0000;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 10px 20px;
+    align-items: center;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    white-space: nowrap;
+    @include media-breakpoint-up(xl) {
+        font-size: 18px;
+    }
+
+    &.is--error{
+        display: inline-flex;
+    }
+
+    svg {
+        transition: all 0.5s;
+        stroke: #FF0000;
+        stroke-width: 1.5;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        margin-right: 8px;
     }
 }

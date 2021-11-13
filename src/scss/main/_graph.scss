@@ -53,7 +53,6 @@
 
     img {
         position: relative;
-        left: -99px;
         max-width: 575px;
         @include media-breakpoint-up(sm) {
             position: static;
@@ -114,7 +113,7 @@
 .graph-body{
     @include media-breakpoint-only(xs) {
         overflow: auto;
-        margin-left: -22px;
-        margin-right: -75px;
+        margin-left: -20px;
+        margin-right: 20px;
     }
 }

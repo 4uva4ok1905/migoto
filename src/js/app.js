@@ -53,7 +53,8 @@ $(window).scroll(function () {
             startCounter($(this))
         }
     });
-}).trigger("scroll");;
+}).trigger("scroll");
+;
 
 
 function startCounter($el) {
@@ -82,6 +83,8 @@ $("form").on("submit", function (e) {
     const _this = $(this);
     const data = _this.serialize()
 
+    if (validateForm()) return
+
     $.ajax({
         type: "POST",
         url: "https://fero.com.ua/mail.php",
@@ -92,7 +95,7 @@ $("form").on("submit", function (e) {
 
             if (json['success']) {
                 _this.trigger("reset");
-                $('[type="date"], [type="time"]').trigger("change");
+                $('input, textarea').trigger("change");
             } else {
                 if (json['error']) {
                     for (let i in json['error']) {
@@ -107,7 +110,38 @@ $("form").on("submit", function (e) {
     });
 })
 
-$('[type="date"], [type="time"]').change(function () {
+function validateForm() {
+    let hasError = false;
+
+    $(".is--error").removeClass("is--error");
+
+    if (!$("#form-name").val().length) {
+        $("#form-name").addClass("is--error");
+
+        hasError = true
+    }
+
+    if (!$("#form-surname").val().length) {
+        $("#form-surname").addClass("is--error");
+
+        hasError = true
+    }
+
+    if (!$("#form-phone").val().length) {
+        $("#form-phone").addClass("is--error");
+
+        hasError = true
+    }
+
+    if(!$("#form-privacy").is(":checked")){
+        $("#form-privacy-error").addClass("is--error");
+        hasError = true
+    }
+
+    return hasError;
+}
+
+$('input, textarea').change(function () {
     if (!$(this).val()) {
         $(this).val("");
         $(this).parent().addClass("is--empty")
