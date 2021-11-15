@@ -2,6 +2,9 @@ import $ from "jquery";
 import * as AOS from "aos/dist/aos";
 
 require("@fancyapps/fancybox")
+require("inputmask/dist/jquery.inputmask.min")
+
+Inputmask().mask(document.querySelectorAll("input"));
 
 // ANIMATION SCROLL
 AOS.init({
@@ -127,7 +130,7 @@ function validateForm() {
         hasError = true
     }
 
-    if (!$("#form-phone").val().length) {
+    if (!$("#form-phone").inputmask("isComplete")){
         $("#form-phone").addClass("is--error");
 
         hasError = true

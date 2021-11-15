@@ -301,7 +301,7 @@
                             <div class="about-additional__body" data-aos-once="true" data-aos="fade-left"
                                  data-aos-delay="400" data-aos-anchor="#about-additional4">
                                 <p>Для вас мы сделали еще один замечательный раздел Market. Здесь вы можете покупать
-                                    любые товары за удобную валюту или крипту. Для производителей уникальных товаров мы
+                                    любые товары за удобную фиатную или крипто валюту. Для производителей уникальных товаров мы
                                     даем возможность создание своего магазина.</p>
                             </div>
                         </div>
@@ -1025,7 +1025,8 @@
                         <form action="" novalidate autocomplete="off">
                             <div class="form-group">
                                 <input id="form-name" type="text" name="name" class="form-control" required>
-                                <label for="form-name">Имя</label>
+                                <label for="form-name"><span>Имя</span><span>Это поле не заполнено</span></label>
+
                                 <div class="form-group__error">
                                     <svg class="svg" width="18px" height="18px">
                                         <use xlink:href="images/icons.svg#info"></use>
@@ -1034,7 +1035,7 @@
                             </div>
                             <div class="form-group">
                                 <input id="form-surname" type="text" name="surname" class="form-control" required>
-                                <label for="form-surname">Фамилия</label>
+                                <label for="form-surname"><span>Фамилия</span><span>Это поле не заполнено</span></label>
                                 <div class="form-group__error">
                                     <svg class="svg" width="18px" height="18px">
                                         <use xlink:href="images/icons.svg#info"></use>
@@ -1042,7 +1043,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input id="form-phone" type="tel" name="phone" class="form-control" placeholder="+380" required>
+                                <input id="form-phone" type="tel" data-inputmask="'mask': '+38099-999-99-99'" name="phone" class="form-control" placeholder="+380" required>
+                                <label for="form-phone"><span></span><span>Номер некорректно введен</span></label>
                                 <div class="form-group__error">
                                     <svg class="svg" width="18px" height="18px">
                                         <use xlink:href="images/icons.svg#info"></use>

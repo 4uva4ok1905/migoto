@@ -42,6 +42,10 @@
         @include media-breakpoint-up(xl) {
             font-size: 12px;
         }
+
+        span:last-child {
+            display: none;
+        }
     }
 }
 
@@ -179,7 +183,8 @@
 
 .form-group {
     .form-control {
-        &:focus {
+        &:focus,
+        &.is--error {
             color: $color-primary;
 
             &::-webkit-inner-spin-button,
@@ -193,6 +198,19 @@
                 font-size: 10px;
                 @include media-breakpoint-up(xl) {
                     font-size: 12px;
+                }
+            }
+        }
+
+        &.is--error {
+            & + label {
+                span:first-child {
+                    display: none;
+                }
+
+                span:last-child {
+                    display: block;
+                    color: #FF0000;
                 }
             }
         }
